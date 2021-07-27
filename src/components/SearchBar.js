@@ -79,6 +79,7 @@ const SearchBar = ({ onSubmit }) => {
             className={classes.searchbar}
             fullWidth
             label=""
+            placeholder="Search for videos..."
             value={searchTerm}
             onChange={handleChange}
             onKeyUp={onKeyUp}
