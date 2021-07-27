@@ -2,6 +2,6 @@
 
 # Youtube Search
 
-Ad-free ;)
+[Ad-free ;)](https://kristenprescott.github.io/youtube-search/)
 
 </div>
