@@ -7,6 +7,7 @@ import {
   createTheme,
   ThemeProvider,
 } from "@material-ui/core/styles";
+import "./index.css";
 
 /*
 primary - used to represent primary interface elements for a user. It's the color displayed most frequently across your app's screens and components.

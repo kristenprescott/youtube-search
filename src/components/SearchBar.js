@@ -7,10 +7,12 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "10px 0px",
     paddingBottom: "20px",
+    marginTop: "1%",
   },
   searchbar: {
     backgroundColor: "transparent",
     border: "none",
+    boxShadow: "1px 1px 0px rgba(0,0,0,0.7",
     outline: "none",
     width: "500px",
     height: "25px",
@@ -72,11 +74,11 @@ const SearchBar = ({ onSubmit }) => {
     <Paper elevation={6} className={classes.search}>
       <div className={classes.wrapper}>
         <div className={classes.searchIcon}>
-          <SearchIcon />
+          <SearchIcon style={{ margin: "1rem", fontSize: "2rem" }} />
           <TextField
             className={classes.searchbar}
             fullWidth
-            label="Search..."
+            label=""
             value={searchTerm}
             onChange={handleChange}
             onKeyUp={onKeyUp}

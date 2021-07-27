@@ -1,17 +1,20 @@
-import { AppBar, Toolbar, Typography, IconButton } from "@material-ui/core";
+import {
+  AppBar,
+  Toolbar,
+  Typography /*, IconButton*/,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
+// import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // flexGrow: 1,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
   AppBar: {
     width: "100vw",
-    height: "13vmin",
+    height: "9rem",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -23,10 +26,6 @@ const useStyles = makeStyles((theme) => ({
       display: "block",
     },
   },
-  searchbarWrapper: {
-    // border: "1px solid ghostwhite",
-    // width: "calc(50vmin + 100px)",
-  },
 }));
 
 export default function Navbar({ children }) {
@@ -37,16 +36,23 @@ export default function Navbar({ children }) {
       <div className={classes.root}>
         <AppBar className={classes.AppBar} position="static">
           <Toolbar>
-            <IconButton
+            {/* <IconButton
               edge="start"
               className={classes.menuButton}
               color="inherit"
               aria-label="open drawer"
             >
               <MenuIcon />
-            </IconButton>
+            </IconButton> */}
             <Typography className={classes.title} variant="h6" noWrap>
-              Youtube Clone
+              <span
+                style={{
+                  fontSize: "3.6rem",
+                  textShadow: "1px 2px 2px rgba(0,0,0,0.75)",
+                }}
+              >
+                Youtube Search
+              </span>
             </Typography>
             <div className={classes.searchbarWrapper}>{children}</div>
           </Toolbar>

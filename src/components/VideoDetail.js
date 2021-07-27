@@ -31,7 +31,7 @@ const VideoDetail = ({
           alignItems: "center",
         }}
       >
-        <img width="300px" src={Loader} />
+        <img alt="loading..." width="300px" src={Loader} />
       </div>
     );
 
@@ -39,22 +39,32 @@ const VideoDetail = ({
 
   return (
     <React.Fragment>
-      <Paper elevation={6} className={classes.container}>
-        <iframe
-          frameBorder="0"
-          height="100%"
-          width="100%"
-          title="Video Player"
-          src={videoSrc}
-        />
-      </Paper>
-      <Paper elevation={6} className={classes.padding}>
-        <Typography variant="h4">
-          {title} - {channelTitle}
-        </Typography>
-        <Typography variant="subtitle1">{channelTitle}</Typography>
-        <Typography variant="subtitle2">{description}</Typography>
-      </Paper>
+      <div style={{ height: "100vh" }}>
+        <Paper elevation={6} className={classes.container}>
+          <iframe
+            frameBorder="0"
+            height="100%"
+            width="100%"
+            title="Video Player"
+            src={videoSrc}
+          />
+        </Paper>
+      </div>
+      <div
+        style={{
+          paddingTop: "0px",
+          marginTop: "0px",
+          border: "5px solid tomato",
+        }}
+      >
+        <Paper elevation={6} className={classes.padding}>
+          <Typography variant="h4">
+            {title} - {channelTitle}
+          </Typography>
+          <Typography variant="subtitle1">{channelTitle}</Typography>
+          <Typography variant="subtitle2">{description}</Typography>
+        </Paper>
+      </div>
     </React.Fragment>
   );
 };
